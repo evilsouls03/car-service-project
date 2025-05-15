@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - AutoCare</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <header class="dashboard-header">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-car"></i> AutoCare</h1>
+            </div>
+            <div class="user-menu">
+                <div class="notifications">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </div>
+                <div class="user-profile">
+                    <img src="images/user-avatar.jpg" alt="User Avatar">
+                    <span>John Doe</span>
+                    <i class="fas fa-chevron-down"></i>
+                    <div class="dropdown-menu">
+                        <a href="profile.html"><i class="fas fa-user"></i> My Profile</a>
+                        <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                        <a href="php/logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <aside class="dashboard-sidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="dashboard.html">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="my-vehicles.html">
+                            <i class="fas fa-car"></i>
+                            <span>My Vehicles</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="my-bookings.html">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>My Bookings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="service-history.html">
+                            <i class="fas fa-history"></i>
+                            <span>Service History</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="invoices.html">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                            <span>Invoices</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html">
+                            <i class="fas fa-user-circle"></i>
+                            <span>My Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            <i class="fas fa-home"></i>
+                            <span>Back to Website</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="dashboard-content">
+            <div class="dashboard-header">
+                <h2>Dashboard</h2>
+                <div class="quick-actions">
+                    <a href="booking.html" class="btn-primary"><i class="fas fa-plus"></i> Book New Service</a>
+                </div>
+            </div>
+
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3>2</h3>
+                        <p>Registered Vehicles</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3>1</h3>
+                        <p>Upcoming Appointments</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3>5</h3>
+                        <p>Past Services</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3>2</h3>
+                        <p>Recommended Services</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-sections">
+                <div class="dashboard-section">
+                    <div class="section-header">
+                        <h3>Upcoming Appointments</h3>
+                        <a href="my-bookings.html" class="view-all">View All</a>
+                    </div>
+                    <div class="section-content">
+                        <div class="appointment-card">
+                            <div class="appointment-date">
+                                <div class="date-box">
+                                    <span class="month">May</span>
+                                    <span class="day">15</span>
+                                </div>
+                                <span class="time">10:00 AM</span>
+                            </div>
+                            <div class="appointment-details">
+                                <h4>Oil Change</h4>
+                                <p class="vehicle">Toyota Camry (2020)</p>
+                                <p class="status"><span class="status-confirmed">Confirmed</span></p>
+                            </div>
+                            <div class="appointment-actions">
+                                <button class="btn-secondary btn-sm">Reschedule</button>
+                                <button class="btn-outline btn-sm">Cancel</button>
+                            </div>
+                        </div>
+                        <div class="empty-state" style="display: none;">
+                            <div class="empty-icon">
+                                <i class="fas fa-calendar-day"></i>
+                            </div>
+                            <h4>No Upcoming Appointments</h4>
+                            <p>You don't have any scheduled appointments.</p>
+                            <a href="booking.html" class="btn-primary">Book a Service</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-section">
+                    <div class="section-header">
+                        <h3>My Vehicles</h3>
+                        <a href="my-vehicles.html" class="view-all">View All</a>
+                    </div>
+                    <div class="section-content">
+                        <div class="vehicle-cards">
+                            <div class="vehicle-card">
+                                <div class="vehicle-icon">
+                                    <i class="fas fa-car-side"></i>
+                                </div>
+                                <div class="vehicle-details">
+                                    <h4>Toyota Camry</h4>
+                                    <p>2020 • Sedan</p>
+                                    <p>License: ABC123</p>
+                                </div>
+                                <div class="vehicle-status">
+                                    <span class="status-good">Good Condition</span>
+                                </div>
+                            </div>
+                            <div class="vehicle-card">
+                                <div class="vehicle-icon">
+                                    <i class="fas fa-truck-pickup"></i>
+                                </div>
+                                <div class="vehicle-details">
+                                    <h4>Ford F-150</h4>
+                                    <p>2018 • Truck</p>
+                                    <p>License: XYZ789</p>
+                                </div>
+                                <div class="vehicle-status">
+                                    <span class="status-attention">Service Due</span>
+                                </div>
+                            </div>
+                            <a href="add-vehicle.html" class="add-vehicle-card">
+                                <div class="add-icon">
+                                    <i class="fas fa-plus-circle"></i>
+                                </div>
+                                <p>Add New Vehicle</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-sections">
+                <div class="dashboard-section">
+                    <div class="section-header">
+                        <h3>Recent Service History</h3>
+                        <a href="service-history.html" class="view-all">View All</a>
+                    </div>
+                    <div class="section-content">
+                        <div class="service-history-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Service</th>
+                                        <th>Vehicle</th>
+                                        <th>Cost</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Apr 10, 2023</td>
+                                        <td>Oil Change</td>
+                                        <td>Toyota Camry</td>
+                                        <td>$45.99</td>
+                                        <td><span class="status-completed">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mar 15, 2023</td>
+                                        <td>Brake Service</td>
+                                        <td>Ford F-150</td>
+                                        <td>$189.99</td>
+                                        <td><span class="status-completed">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Feb 22, 2023</td>
+                                        <td>Tire Rotation</td>
+                                        <td>Toyota Camry</td>
+                                        <td>$49.99</td>
+                                        <td><span class="status-completed">Completed</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-section">
+                    <div class="section-header">
+                        <h3>Recommended Services</h3>
+                    </div>
+                    <div class="section-content">
+                        <div class="recommended-services">
+                            <div class="recommended-service">
+                                <div class="service-icon warning">
+                                    <i class="fas fa-oil-can"></i>
+                                </div>
+                                <div class="service-details">
+                                    <h4>Oil Change Due</h4>
+                                    <p>Toyota Camry • Due in 500 miles</p>
+                                </div>
+                                <a href="booking.html?service=oil-change" class="btn-primary btn-sm">Book Now</a>
+                            </div>
+                            <div class="recommended-service">
+                                <div class="service-icon">
+                                    <i class="fas fa-tire"></i>
+                                </div>
+                                <div class="service-details">
+                                    <h4>Tire Rotation</h4>
+                                    <p>Ford F-150 • Recommended</p>
+                                </div>
+                                <a href="booking.html?service=tire-rotation" class="btn-primary btn-sm">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
