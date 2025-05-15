@@ -1,357 +1,523 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book a Service - AutoCare</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
     <header>
-        <div class="container">
-            <div class="logo">
-                <h1><i class="fas fa-car"></i> AutoCare</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="booking.html" class="active">Book Now</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="login.html" class="btn-login">Login</a></li>
-                </ul>
-            </nav>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
+      <div class="container">
+        <div class="logo">
+          <h1><i class="fas fa-car"></i> AutoCare</h1>
         </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="booking.html" class="active">Book Now</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html" class="btn-login">Login</a></li>
+          </ul>
+        </nav>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
     </header>
 
     <section class="page-header">
-        <div class="container">
-            <h1>Book a Service</h1>
-            <p>Schedule your vehicle maintenance appointment</p>
-        </div>
+      <div class="container">
+        <h1>Book a Service</h1>
+        <p>Schedule your vehicle maintenance appointment</p>
+      </div>
     </section>
 
     <section class="booking-section">
-        <div class="container">
-            <div class="booking-container">
-                <div class="booking-steps">
-                    <div class="step active" id="step1">
-                        <div class="step-number">1</div>
-                        <div class="step-text">Service Selection</div>
+      <div class="container">
+        <div class="booking-container">
+          <div class="booking-steps">
+            <div class="step active" id="step1">
+              <div class="step-number">1</div>
+              <div class="step-text">Service Selection</div>
+            </div>
+            <div class="step" id="step2">
+              <div class="step-number">2</div>
+              <div class="step-text">Vehicle Details</div>
+            </div>
+            <div class="step" id="step3">
+              <div class="step-number">3</div>
+              <div class="step-text">Date & Time</div>
+            </div>
+            <div class="step" id="step4">
+              <div class="step-number">4</div>
+              <div class="step-text">Personal Details</div>
+            </div>
+            <div class="step" id="step5">
+              <div class="step-number">5</div>
+              <div class="step-text">Confirmation</div>
+            </div>
+          </div>
+
+          <div class="booking-form-container">
+            <!-- Step 1: Service Selection -->
+            <div class="booking-form active" id="form-step1">
+              <h2>Select Service</h2>
+              <p>Choose the service you need for your vehicle</p>
+
+              <div class="service-selection">
+                <div class="service-option">
+                  <input
+                    type="radio"
+                    id="oil-change"
+                    name="service"
+                    value="oil-change"
+                  />
+                  <label for="oil-change">
+                    <div class="service-icon">
+                      <i class="fas fa-oil-can"></i>
                     </div>
-                    <div class="step" id="step2">
-                        <div class="step-number">2</div>
-                        <div class="step-text">Vehicle Details</div>
-                    </div>
-                    <div class="step" id="step3">
-                        <div class="step-number">3</div>
-                        <div class="step-text">Date & Time</div>
-                    </div>
-                    <div class="step" id="step4">
-                        <div class="step-number">4</div>
-                        <div class="step-text">Personal Details</div>
-                    </div>
-                    <div class="step" id="step5">
-                        <div class="step-number">5</div>
-                        <div class="step-text">Confirmation</div>
-                    </div>
+                    <div class="service-name">Oil Change</div>
+                    <div class="service-price">From $29.99</div>
+                  </label>
                 </div>
 
-                <div class="booking-form-container">
-                    <!-- Step 1: Service Selection -->
-                    <div class="booking-form active" id="form-step1">
-                        <h2>Select Service</h2>
-                        <p>Choose the service you need for your vehicle</p>
-                        
-                        <div class="service-selection">
-                            <div class="service-option">
-                                <input type="radio" id="oil-change" name="service" value="oil-change">
-                                <label for="oil-change">
-                                    <div class="service-icon"><i class="fas fa-oil-can"></i></div>
-                                    <div class="service-name">Oil Change</div>
-                                    <div class="service-price">From $29.99</div>
-                                </label>
-                            </div>
-                            
-                            <div class="service-option">
-                                <input type="radio" id="brake-service" name="service" value="brake-service">
-                                <label for="brake-service">
-                                    <div class="service-icon"><i class="fas fa-brake-system"></i></div>
-                                    <div class="service-name">Brake Service</div>
-                                    <div class="service-price">From $89.99</div>
-                                </label>
-                            </div>
-                            
-                            <div class="service-option">
-                                <input type="radio" id="tire-service" name="service" value="tire-service">
-                                <label for="tire-service">
-                                    <div class="service-icon"><i class="fas fa-tire"></i></div>
-                                    <div class="service-name">Tire Service</div>
-                                    <div class="service-price">From $49.99</div>
-                                </label>
-                            </div>
-                            
-                            <div class="service-option">
-                                <input type="radio" id="engine-diagnostics" name="service" value="engine-diagnostics">
-                                <label for="engine-diagnostics">
-                                    <div class="service-icon"><i class="fas fa-car-battery"></i></div>
-                                    <div class="service-name">Engine Diagnostics</div>
-                                    <div class="service-price">From $69.99</div>
-                                </label>
-                            </div>
-                            
-                            <div class="service-option">
-                                <input type="radio" id="ac-service" name="service" value="ac-service">
-                                <label for="ac-service">
-                                    <div class="service-icon"><i class="fas fa-snowflake"></i></div>
-                                    <div class="service-name">AC Service</div>
-                                    <div class="service-price">From $79.99</div>
-                                </label>
-                            </div>
-                            
-                            <div class="service-option">
-                                <input type="radio" id="full-service" name="service" value="full-service">
-                                <label for="full-service">
-                                    <div class="service-icon"><i class="fas fa-tools"></i></div>
-                                    <div class="service-name">Full Service</div>
-                                    <div class="service-price">From $149.99</div>
-                                </label>
-                            </div>
-                        </div>
-                        
-                        <div class="form-navigation">
-                            <button type="button" class="btn-next" onclick="nextStep(1)">Continue</button>
-                        </div>
+                <div class="service-option">
+                  <input
+                    type="radio"
+                    id="brake-service"
+                    name="service"
+                    value="brake-service"
+                  />
+                  <label for="brake-service">
+                    <div class="service-icon">
+                      <i class="fas fa-brake-system"></i>
                     </div>
-                    
-                    <!-- Step 2: Vehicle Details -->
-                    <div class="booking-form" id="form-step2">
-                        <h2>Vehicle Details</h2>
-                        <p>Please provide information about your vehicle</p>
-                        
-                        <div class="form-group">
-                            <label for="vehicle-make">Make</label>
-                            <input type="text" id="vehicle-make" name="vehicle-make" placeholder="e.g., Toyota">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="vehicle-model">Model</label>
-                            <input type="text" id="vehicle-model" name="vehicle-model" placeholder="e.g., Camry">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="vehicle-year">Year</label>
-                            <input type="number" id="vehicle-year" name="vehicle-year" placeholder="e.g., 2020">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="license-plate">License Plate (Optional)</label>
-                            <input type="text" id="license-plate" name="license-plate" placeholder="e.g., ABC123">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="mileage">Current Mileage (Optional)</label>
-                            <input type="number" id="mileage" name="mileage" placeholder="e.g., 25000">
-                        </div>
-                        
-                        <div class="form-navigation">
-                            <button type="button" class="btn-prev" onclick="prevStep(2)">Back</button>
-                            <button type="button" class="btn-next" onclick="nextStep(2)">Continue</button>
-                        </div>
-                    </div>
-                    
-                    <!-- Step 3: Date & Time -->
-                    <div class="booking-form" id="form-step3">
-                        <h2>Select Date & Time</h2>
-                        <p>Choose your preferred appointment date and time</p>
-                        
-                        <div class="form-group">
-                            <label for="service-date">Preferred Date</label>
-                            <input type="date" id="service-date" name="service-date">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>Preferred Time</label>
-                            <div class="time-slots">
-                                <div class="time-slot">
-                                    <input type="radio" id="time-9am" name="service-time" value="9:00 AM">
-                                    <label for="time-9am">9:00 AM</label>
-                                </div>
-                                <div class="time-slot">
-                                    <input type="radio" id="time-10am" name="service-time" value="10:00 AM">
-                                    <label for="time-10am">10:00 AM</label>
-                                </div>
-                                <div class="time-slot">
-                                    <input type="radio" id="time-11am" name="service-time" value="11:00 AM">
-                                    <label for="time-11am">11:00 AM</label>
-                                </div>
-                                <div class="time-slot">
-                                    <input type="radio" id="time-1pm" name="service-time" value="1:00 PM">
-                                    <label for="time-1pm">1:00 PM</label>
-                                </div>
-                                <div class="time-slot">
-                                    <input type="radio" id="time-2pm" name="service-time" value="2:00 PM">
-                                    <label for="time-2pm">2:00 PM</label>
-                                </div>
-                                <div class="time-slot">
-                                    <input type="radio" id="time-3pm" name="service-time" value="3:00 PM">
-                                    <label for="time-3pm">3:00 PM</label>
-                                </div>
-                                <div class="time-slot">
-                                    <input type="radio" id="time-4pm" name="service-time" value="4:00 PM">
-                                    <label for="time-4pm">4:00 PM</label>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="additional-notes">Additional Notes (Optional)</label>
-                            <textarea id="additional-notes" name="additional-notes" placeholder="Any specific issues or requests?"></textarea>
-                        </div>
-                        
-                        <div class="form-navigation">
-                            <button type="button" class="btn-prev" onclick="prevStep(3)">Back</button>
-                            <button type="button" class="btn-next" onclick="nextStep(3)">Continue</button>
-                        </div>
-                    </div>
-                    
-                    <!-- Step 4: Personal Details -->
-                    <div class="booking-form" id="form-step4">
-                        <h2>Personal Details</h2>
-                        <p>Please provide your contact information</p>
-                        
-                        <div class="form-group">
-                            <label for="full-name">Full Name</label>
-                            <input type="text" id="full-name" name="full-name" placeholder="John Doe">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="john@example.com">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890">
-                        </div>
-                        
-                        <div class="form-group checkbox-group">
-                            <input type="checkbox" id="create-account" name="create-account">
-                            <label for="create-account">Create an account for faster booking in the future</label>
-                        </div>
-                        
-                        <div class="form-group checkbox-group">
-                            <input type="checkbox" id="terms" name="terms">
-                            <label for="terms">I agree to the <a href="#">terms and conditions</a></label>
-                        </div>
-                        
-                        <div class="form-navigation">
-                            <button type="button" class="btn-prev" onclick="prevStep(4)">Back</button>
-                            <button type="button" class="btn-next" onclick="nextStep(4)">Review Booking</button>
-                        </div>
-                    </div>
-                    
-                    <!-- Step 5: Confirmation -->
-                    <div class="booking-form" id="form-step5">
-                        <h2>Review Your Booking</h2>
-                        <p>Please review your booking details before confirming</p>
-                        
-                        <div class="booking-summary">
-                            <div class="summary-section">
-                                <h3>Selected Service</h3>
-                                <p id="summary-service">Oil Change</p>
-                                <p id="summary-price">$29.99</p>
-                            </div>
-                            
-                            <div class="summary-section">
-                                <h3>Vehicle Details</h3>
-                                <p id="summary-vehicle">Toyota Camry (2020)</p>
-                                <p id="summary-license">License: ABC123</p>
-                            </div>
-                            
-                            <div class="summary-section">
-                                <h3>Appointment</h3>
-                                <p id="summary-date">May 15, 2023</p>
-                                <p id="summary-time">10:00 AM</p>
-                            </div>
-                            
-                            <div class="summary-section">
-                                <h3>Contact Information</h3>
-                                <p id="summary-name">John Doe</p>
-                                <p id="summary-email">john@example.com</p>
-                                <p id="summary-phone">(123) 456-7890</p>
-                            </div>
-                        </div>
-                        
-                        <div class="form-navigation">
-                            <button type="button" class="btn-prev" onclick="prevStep(5)">Back</button>
-                            <button type="button" class="btn-primary" id="confirm-booking" onclick="submitBooking()">Confirm Booking</button>
-                        </div>
-                    </div>
-                    
-                    <!-- Booking Confirmation Message (Hidden initially) -->
-                    <div class="booking-confirmation" id="booking-confirmation" style="display: none;">
-                        <div class="confirmation-icon">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <h2>Booking Confirmed!</h2>
-                        <p>Your service appointment has been scheduled successfully.</p>
-                        <div class="confirmation-details">
-                            <p>Booking Reference: <span id="booking-reference">AC12345</span></p>
-                            <p>A confirmation email has been sent to your email address.</p>
-                        </div>
-                        <div class="confirmation-actions">
-                            <a href="index.html" class="btn-secondary">Return to Home</a>
-                            <a href="dashboard.html" class="btn-primary">View My Bookings</a>
-                        </div>
-                    </div>
+                    <div class="service-name">Brake Service</div>
+                    <div class="service-price">From $89.99</div>
+                  </label>
                 </div>
+
+                <div class="service-option">
+                  <input
+                    type="radio"
+                    id="tire-service"
+                    name="service"
+                    value="tire-service"
+                  />
+                  <label for="tire-service">
+                    <div class="service-icon"><i class="fas fa-tire"></i></div>
+                    <div class="service-name">Tire Service</div>
+                    <div class="service-price">From $49.99</div>
+                  </label>
+                </div>
+
+                <div class="service-option">
+                  <input
+                    type="radio"
+                    id="engine-diagnostics"
+                    name="service"
+                    value="engine-diagnostics"
+                  />
+                  <label for="engine-diagnostics">
+                    <div class="service-icon">
+                      <i class="fas fa-car-battery"></i>
+                    </div>
+                    <div class="service-name">Engine Diagnostics</div>
+                    <div class="service-price">From $69.99</div>
+                  </label>
+                </div>
+
+                <div class="service-option">
+                  <input
+                    type="radio"
+                    id="ac-service"
+                    name="service"
+                    value="ac-service"
+                  />
+                  <label for="ac-service">
+                    <div class="service-icon">
+                      <i class="fas fa-snowflake"></i>
+                    </div>
+                    <div class="service-name">AC Service</div>
+                    <div class="service-price">From $79.99</div>
+                  </label>
+                </div>
+
+                <div class="service-option">
+                  <input
+                    type="radio"
+                    id="full-service"
+                    name="service"
+                    value="full-service"
+                  />
+                  <label for="full-service">
+                    <div class="service-icon"><i class="fas fa-tools"></i></div>
+                    <div class="service-name">Full Service</div>
+                    <div class="service-price">From $149.99</div>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-navigation">
+                <button type="button" class="btn-next" onclick="nextStep(1)">
+                  Continue
+                </button>
+              </div>
             </div>
+
+            <!-- Step 2: Vehicle Details -->
+            <div class="booking-form" id="form-step2">
+              <h2>Vehicle Details</h2>
+              <p>Please provide information about your vehicle</p>
+
+              <div class="form-group">
+                <label for="vehicle-make">Make</label>
+                <input
+                  type="text"
+                  id="vehicle-make"
+                  name="vehicle-make"
+                  placeholder="e.g., Toyota"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="vehicle-model">Model</label>
+                <input
+                  type="text"
+                  id="vehicle-model"
+                  name="vehicle-model"
+                  placeholder="e.g., Camry"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="vehicle-year">Year</label>
+                <input
+                  type="number"
+                  id="vehicle-year"
+                  name="vehicle-year"
+                  placeholder="e.g., 2020"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="license-plate">License Plate (Optional)</label>
+                <input
+                  type="text"
+                  id="license-plate"
+                  name="license-plate"
+                  placeholder="e.g., ABC123"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="mileage">Current Mileage (Optional)</label>
+                <input
+                  type="number"
+                  id="mileage"
+                  name="mileage"
+                  placeholder="e.g., 25000"
+                />
+              </div>
+
+              <div class="form-navigation">
+                <button type="button" class="btn-prev" onclick="prevStep(2)">
+                  Back
+                </button>
+                <button type="button" class="btn-next" onclick="nextStep(2)">
+                  Continue
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 3: Date & Time -->
+            <div class="booking-form" id="form-step3">
+              <h2>Select Date & Time</h2>
+              <p>Choose your preferred appointment date and time</p>
+
+              <div class="form-group">
+                <label for="service-date">Preferred Date</label>
+                <input type="date" id="service-date" name="service-date" />
+              </div>
+
+              <div class="form-group">
+                <label>Preferred Time</label>
+                <div class="time-slots">
+                  <div class="time-slot">
+                    <input
+                      type="radio"
+                      id="time-9am"
+                      name="service-time"
+                      value="9:00 AM"
+                    />
+                    <label for="time-9am">9:00 AM</label>
+                  </div>
+                  <div class="time-slot">
+                    <input
+                      type="radio"
+                      id="time-10am"
+                      name="service-time"
+                      value="10:00 AM"
+                    />
+                    <label for="time-10am">10:00 AM</label>
+                  </div>
+                  <div class="time-slot">
+                    <input
+                      type="radio"
+                      id="time-11am"
+                      name="service-time"
+                      value="11:00 AM"
+                    />
+                    <label for="time-11am">11:00 AM</label>
+                  </div>
+                  <div class="time-slot">
+                    <input
+                      type="radio"
+                      id="time-1pm"
+                      name="service-time"
+                      value="1:00 PM"
+                    />
+                    <label for="time-1pm">1:00 PM</label>
+                  </div>
+                  <div class="time-slot">
+                    <input
+                      type="radio"
+                      id="time-2pm"
+                      name="service-time"
+                      value="2:00 PM"
+                    />
+                    <label for="time-2pm">2:00 PM</label>
+                  </div>
+                  <div class="time-slot">
+                    <input
+                      type="radio"
+                      id="time-3pm"
+                      name="service-time"
+                      value="3:00 PM"
+                    />
+                    <label for="time-3pm">3:00 PM</label>
+                  </div>
+                  <div class="time-slot">
+                    <input
+                      type="radio"
+                      id="time-4pm"
+                      name="service-time"
+                      value="4:00 PM"
+                    />
+                    <label for="time-4pm">4:00 PM</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="additional-notes"
+                  >Additional Notes (Optional)</label
+                >
+                <textarea
+                  id="additional-notes"
+                  name="additional-notes"
+                  placeholder="Any specific issues or requests?"
+                ></textarea>
+              </div>
+
+              <div class="form-navigation">
+                <button type="button" class="btn-prev" onclick="prevStep(3)">
+                  Back
+                </button>
+                <button type="button" class="btn-next" onclick="nextStep(3)">
+                  Continue
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 4: Personal Details -->
+            <div class="booking-form" id="form-step4">
+              <h2>Personal Details</h2>
+              <p>Please provide your contact information</p>
+
+              <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input
+                  type="text"
+                  id="full-name"
+                  name="full-name"
+                  placeholder="John Doe"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="john@example.com"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="(123) 456-7890"
+                />
+              </div>
+
+              <div class="form-group checkbox-group">
+                <input
+                  type="checkbox"
+                  id="create-account"
+                  name="create-account"
+                />
+                <label for="create-account"
+                  >Create an account for faster booking in the future</label
+                >
+              </div>
+
+              <div class="form-group checkbox-group">
+                <input type="checkbox" id="terms" name="terms" />
+                <label for="terms"
+                  >I agree to the <a href="#">terms and conditions</a></label
+                >
+              </div>
+
+              <div class="form-navigation">
+                <button type="button" class="btn-prev" onclick="prevStep(4)">
+                  Back
+                </button>
+                <button type="button" class="btn-next" onclick="nextStep(4)">
+                  Review Booking
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 5: Confirmation -->
+            <div class="booking-form" id="form-step5">
+              <h2>Review Your Booking</h2>
+              <p>Please review your booking details before confirming</p>
+
+              <div class="booking-summary">
+                <div class="summary-section">
+                  <h3>Selected Service</h3>
+                  <p id="summary-service">Oil Change</p>
+                  <p id="summary-price">$29.99</p>
+                </div>
+
+                <div class="summary-section">
+                  <h3>Vehicle Details</h3>
+                  <p id="summary-vehicle">Toyota Camry (2020)</p>
+                  <p id="summary-license">License: ABC123</p>
+                </div>
+
+                <div class="summary-section">
+                  <h3>Appointment</h3>
+                  <p id="summary-date">May 15, 2023</p>
+                  <p id="summary-time">10:00 AM</p>
+                </div>
+
+                <div class="summary-section">
+                  <h3>Contact Information</h3>
+                  <p id="summary-name">John Doe</p>
+                  <p id="summary-email">john@example.com</p>
+                  <p id="summary-phone">(123) 456-7890</p>
+                </div>
+              </div>
+
+              <div class="form-navigation">
+                <button type="button" class="btn-prev" onclick="prevStep(5)">
+                  Back
+                </button>
+                <button
+                  type="button"
+                  class="btn-primary"
+                  id="confirm-booking"
+                  onclick="submitBooking()"
+                >
+                  Confirm Booking
+                </button>
+              </div>
+            </div>
+
+            <!-- Booking Confirmation Message (Hidden initially) -->
+            <div
+              class="booking-confirmation"
+              id="booking-confirmation"
+              style="display: none"
+            >
+              <div class="confirmation-icon">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <h2>Booking Confirmed!</h2>
+              <p>Your service appointment has been scheduled successfully.</p>
+              <div class="confirmation-details">
+                <p>
+                  Booking Reference: <span id="booking-reference">AC12345</span>
+                </p>
+                <p>A confirmation email has been sent to your email address.</p>
+              </div>
+              <div class="confirmation-actions">
+                <a href="index.html" class="btn-secondary">Return to Home</a>
+                <a href="dashboard.html" class="btn-primary"
+                  >View My Bookings</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>AutoCare</h3>
-                    <p>Professional vehicle maintenance and repair services to keep your car running at its best.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="booking.html">Book Now</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact Us</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Service Road, Autoville</p>
-                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
-                    <p><i class="fas fa-envelope"></i> info@autocare.com</p>
-                    <p><i class="fas fa-clock"></i> Mon-Sat: 8:00 AM - 6:00 PM</p>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>AutoCare</h3>
+            <p>
+              Professional vehicle maintenance and repair services to keep your
+              car running at its best.
+            </p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 AutoCare. All rights reserved.</p>
-            </div>
+          </div>
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="booking.html">Book Now</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="about.html">About Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> 123 Service Road, Autoville
+            </p>
+            <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+            <p><i class="fas fa-envelope"></i> info@autocare.com</p>
+            <p><i class="fas fa-clock"></i> Mon-Sat: 8:00 AM - 6:00 PM</p>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 AutoCare. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
 
     <script src="js/script.js"></script>
     <script src="js/booking.js"></script>
-</body>
+  </body>
 </html>

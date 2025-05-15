@@ -12,12 +12,15 @@
   --gray-light: #f1f5f9;
   --gray: #e2e8f0;
   --gray-dark: #64748b;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --border-radius: 8px;
   --border-radius-lg: 12px;
   --transition: all 0.3s ease;
-  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
 }
 
 * {
@@ -102,12 +105,20 @@ img {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-dark)
+  );
   color: white;
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+  background: linear-gradient(
+    135deg,
+    var(--primary-dark),
+    var(--primary-color)
+  );
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   color: white;
@@ -176,7 +187,11 @@ header .container {
 
 .logo h1 i {
   margin-right: 10px;
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--accent-color)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -218,7 +233,11 @@ nav ul li a.active {
 }
 
 .btn-login {
-  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-dark)
+  );
   color: white !important;
   padding: 8px 20px !important;
   border-radius: var(--border-radius);
@@ -226,7 +245,11 @@ nav ul li a.active {
 }
 
 .btn-login:hover {
-  background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+  background: linear-gradient(
+    135deg,
+    var(--primary-dark),
+    var(--primary-color)
+  );
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
@@ -240,8 +263,8 @@ nav ul li a.active {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url("../images/hero-bg.png") no-repeat
-    center center / cover;
+  background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)),
+    url("../images/hero-bg.png") no-repeat center center / cover;
   color: white;
   padding: 180px 0;
   text-align: center;
@@ -256,7 +279,11 @@ nav ul li a.active {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at center, rgba(79, 70, 229, 0.3) 0%, transparent 70%);
+  background: radial-gradient(
+    circle at center,
+    rgba(79, 70, 229, 0.3) 0%,
+    transparent 70%
+  );
 }
 
 .hero-content {
@@ -336,7 +363,11 @@ nav ul li a.active {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(79, 70, 229, 0.05), rgba(249, 115, 22, 0.05));
+  background: linear-gradient(
+    135deg,
+    rgba(79, 70, 229, 0.05),
+    rgba(249, 115, 22, 0.05)
+  );
   z-index: -1;
   opacity: 0;
   transition: var(--transition);
@@ -354,7 +385,11 @@ nav ul li a.active {
 .feature-card i {
   font-size: 3rem;
   margin-bottom: 25px;
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--accent-color)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -558,8 +593,8 @@ nav ul li a.active {
 
 /* CTA Section */
 .cta {
-  background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url("../images/cta-bg.png") no-repeat
-    center center / cover;
+  background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)),
+    url("../images/cta-bg.png") no-repeat center center / cover;
   background-attachment: fixed;
   color: white;
   text-align: center;
@@ -575,7 +610,11 @@ nav ul li a.active {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at center, rgba(79, 70, 229, 0.3) 0%, transparent 70%);
+  background: radial-gradient(
+    circle at center,
+    rgba(79, 70, 229, 0.3) 0%,
+    transparent 70%
+  );
 }
 
 .cta h2 {
@@ -681,7 +720,11 @@ footer::before {
 }
 
 .social-icons a:hover {
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--accent-color)
+  );
   transform: translateY(-3px);
 }
 
@@ -721,8 +764,8 @@ footer::before {
 
 /* Page Header */
 .page-header {
-  background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url("../images/page-header-bg.png")
-    no-repeat center center / cover;
+  background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)),
+    url("../images/page-header-bg.png") no-repeat center center / cover;
   color: white;
   text-align: center;
   padding: 100px 0;
@@ -737,7 +780,11 @@ footer::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at center, rgba(79, 70, 229, 0.3) 0%, transparent 70%);
+  background: radial-gradient(
+    circle at center,
+    rgba(79, 70, 229, 0.3) 0%,
+    transparent 70%
+  );
 }
 
 .page-header h1 {
@@ -909,7 +956,11 @@ footer::before {
 }
 
 .step.active .step-number {
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--accent-color)
+  );
 }
 
 .booking-form-container {
@@ -1425,7 +1476,11 @@ footer::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(51, 65, 85, 0.9));
+  background: linear-gradient(
+    135deg,
+    rgba(30, 41, 59, 0.9),
+    rgba(51, 65, 85, 0.9)
+  );
 }
 
 .contact-info > * {
